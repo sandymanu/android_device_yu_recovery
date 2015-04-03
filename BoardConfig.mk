@@ -168,3 +168,14 @@ TW_TARGET_USES_QCOM_BSP := true
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TW_INCLUDE_CRYPTO := true
 
+# MultiRom
+MR_INPUT_TYPE := type_b
+MR_INIT_DEVICES := device/yu/tomato/mr_init_devices.c
+MR_DPI := xhdpi
+MR_DPI_FONT := 216
+MR_FSTAB := device/yu/tomato/twrp.fstab
+MR_USE_MROM_FSTAB := true
+MR_KEXEC_MEM_MIN := 0x05000000
+MR_KEXEC_DTB := true
+MR_CONTINUOUS_FB_UPDATE := true
+
