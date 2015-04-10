@@ -7,29 +7,40 @@
 // You can use * at the end to init this folder and all its subfolders
 const char *mr_init_devices[] =
 {
+		
 	"/sys/class/graphics/fb0",
 	
 	"/sys/block/mmcblk0",
+	"/sys/devices/soc.0",
+	"/sys/devices/soc.0/7824900.sdhci",
+	"/sys/devices/soc.0/7824900.sdhci/mmc_host",
+	"/sys/devices/soc.0/7824900.sdhci/mmc_host",
+	"/sys/devices/soc.0/7824900.sdhci/mmc_host/mmc0",
+	"/sys/devices/soc.0/7824900.sdhci/mmc_host/mmc0/mmc0:0001",
+	"/sys/devices/soc.0/7824900.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0",
+	"/sys/devices/soc.0/7824900.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p21", //boot
+	"/sys/devices/soc.0/7824900.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p27", //cache
+	"/sys/devices/soc.0/7824900.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p1", //modem
+	"/sys/devices/soc.0/7824900.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p26", //persist
+	"/sys/devices/soc.0/7824900.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p25", //system
+	"/sys/devices/soc.0/7824900.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p29", //userdata
 	"/sys/bus/mmc",
 	"/sys/bus/mmc/drivers/mmcblk",
 	"/sys/module/mmc_core",
 	"/sys/module/mmcblk",
 	
+	"/sys/devices/soc.0/gpio_keys.65/input*",
 	"/sys/devices/virtual/input*",
 	"/sys/devices/virtual/misc/uinput",
-	
+	"/sys/devices/soc.0/78b6000.i2c/i2c-0/0-0068/input*",
+
 	// for adb
 	"/sys/devices/virtual/tty/ptmx",
 	"/sys/devices/virtual/android_usb/android0*",
-	"/sys/class*",
 	"/sys/bus/usb",
-	
-	// for qualcomm overlay - /dev/ion
-	"/sys/devices/virtual/misc/ion",
 	
 	// sdcard
 	"/sys/block/mmcblk1",
-	
 	
 	NULL
 };
